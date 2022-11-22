@@ -80,15 +80,17 @@ def MenampilkanDaftarKontakPerusahaan():
             if nomorPokokPerusahaan == daftarKontak[i]['Nomor pokok perusahaan']:
                 print ('Daftar kontak perusahaan: \n Index \t | Nama Perusahaan \t\t | Lokasi \t | Nomor Pokok Perusahaan \t | Nomor Telepon \t')
                 print ('{} \t | {} \t | {} \t | {} \t | {}'.format(i, daftarKontak[i]['Index'], daftarKontak[i]['Nama perusahaan'], daftarKontak[i]['Lokasi'], daftarKontak[i]['Nomor pokok perusahaan'], daftarKontak[i]['Telepon']))
-            else:
+            while nomorPokokPerusahaan != daftarKontak[i]['Nomor pokok perusahaan']:
                 print ("Tidak ada data")
                 break
     elif Menu == '3':
-        break
+        while i not in range(len(daftarKontak)):
+            break
 
     else :
-        print ('pilihan yang anda masukkan salah, silahkan pilih menu yang tersedia')
-        continue
+        while i not in range(len(daftarKontak)):
+            print ('pilihan yang anda masukkan salah, silahkan pilih menu yang tersedia')
+            continue
 
 def MenampilkanSeluruhData():
     print ('Daftar kontak perusahaan: \n Index \t | Nama Perusahaan \t\t | Lokasi \t | Nomor Pokok Perusahaan \t | Nomor Telepon \t')
@@ -202,10 +204,12 @@ def mengupdateKontak():
                 continue
 
     elif Menu == '2':
-        break 
+        while i not in range(len(daftarKontak)): 
+            break 
     else: 
-        print ("Pilihan yang anda masukkan salah, silahkan pilih menu yang tersedia")
-        continue               
+        while i not in range(len(daftarKontak)):
+            print ("Pilihan yang anda masukkan salah, silahkan pilih menu yang tersedia")
+            continue               
 
 #MENU 4. Menghapus Data Kontak Perusahaan / MENU DELETE DATA
 def menghapusKontak():
@@ -236,10 +240,12 @@ def menghapusKontak():
                 continue
 
     elif Menu == '2':
-        break 
+        while i not in range(len(daftarKontak)):
+            break 
     else: 
-        print ("Pilihan yang anda masukkan salah, silahkan pilih menu yang tersedia")
-        continue                             
+        while i not in range(len(daftarKontak)):
+            print ("Pilihan yang anda masukkan salah, silahkan pilih menu yang tersedia")
+            continue                             
  
 #MENU 5. EXIT PROGRAM 
 def ExitProgram():
@@ -249,4 +255,4 @@ def ExitProgram():
         1. Kembali ke menu utama
         
         Masukkan menu yang anda pilih: ''')
-    break 
+        break 
